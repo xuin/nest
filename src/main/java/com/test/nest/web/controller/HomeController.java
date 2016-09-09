@@ -9,12 +9,12 @@ import com.test.nest.TestHessian;
 
 @Controller
 public class HomeController {
-	@Autowired
-	private TestHessian testHessian;
-	
-	@ResponseBody
-	@RequestMapping("/")
-	public String index(){
-		return "test";
-	}
+//	@Autowired
+//	private TestHessian testHessian;
+//	
+//	@ResponseBody
+//	@RequestMapping("/")
+//	public String index(){
+//		return "test";
+//	}
 }

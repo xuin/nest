@@ -3,8 +3,11 @@ package com.test.nest;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.springframework.stereotype.Service;
+
 import com.caucho.hessian.server.HessianServlet;
 
+@Service
 public class BasicService extends HessianServlet implements TestHessian {
 	/**
 	 * 
