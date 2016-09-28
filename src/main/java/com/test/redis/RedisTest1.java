@@ -13,10 +13,11 @@ public class RedisTest1 {
 		System.out.println("Server is running: " + jedis.ping());
 
 		System.out.println(jedis.setnx("abc", "aa"));
-
-		Iterator<String> iterator = jedis.keys("*").iterator();
+		Iterator<byte[]> iterator = jedis.keys("*".getBytes()).iterator();
 		while (iterator.hasNext()) {
-			System.out.println(iterator.next());
+			byte[] aabb= iterator.next();
+			System.out.print(aabb);
+			System.out.println("      "+jedis.ttl(aabb));
 		}
 	}
 }
